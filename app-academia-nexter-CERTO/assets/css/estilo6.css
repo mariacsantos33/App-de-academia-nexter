@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-botoes: #FFFFFF;
+    --cor-texto: #000000;
+    --cor-sobreposicao: #1E0A41;
+    --cor-principal: #49438D;
+}
+
