@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+}
+
+body {
+    background-color: #49438D;
+    background-image: url(../img/img_fundo_texturizado.png);
+    background-size: cover;
+    color: white;
+    font-family: 'Inria Sans', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.header-conteudo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.botao-voltar, 
+.botao-menu {
+    background: none;
+    border: none;
+}
+
+.botao-voltar img, 
+.botao-menu img {
+    width: 25px;
+}
+
+.container-desafios {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 20px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+.lista-cards {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card-desafio {
+    background-color: #1E0A41;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    gap: 15px;
+}
+
+.logo-card {
+    width: 60px;
+    height: auto;
+}
+
+.info-card h2 {
+    font-size: 14px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.btn-participar {
+    background-color: #C4C4C4;
+    color: black;
+    border: none;
+    padding: 3px 20px;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.btn-medalhas {
+    background-color: #C4C4C4;
+    color: black;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+@media (min-width: 2559px) {
+    h1 { 
+        font-size: 48px; 
+    }
+    
+    .card-desafio { 
+        max-width: 800px; 
+        padding: 30px; 
+    }
+    
+    .info-card h2 { 
+        font-size: 28px; 
+    }
+    
+    .btn-participar { 
+        font-size: 20px; 
+        padding: 10px 40px; 
+    }
+}
+
+@media (max-width: 423px) {
+    h1 { 
+        font-size: 18px; 
+    }
+    
+    .card-desafio { 
+        padding: 10px; 
+    }
+    
+    .logo-card { 
+        width: 50px; 
+    }
+    
+    .info-card h2 { 
+        font-size: 12px; 
+    }
+    
+    .lista-cards { 
+        gap: 10px; 
+    }
+}
+
+@media (max-width: 373px) {
+    .btn-medalhas { 
+        font-size: 12px; 
+        padding: 8px 20px; 
+    }
+    
+    .info-card h2 { 
+        font-size: 11px; 
+    }
+}
+
+@media (max-width: 318px) {
+    h1 { 
+        font-size: 16px; 
+    }
+    
+    .logo-card { 
+        display: none; 
+    }
+}

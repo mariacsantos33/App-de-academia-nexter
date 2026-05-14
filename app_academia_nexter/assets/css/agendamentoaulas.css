@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+}
+
+body {
+    /* Aplica o filtro roxo escuro (#1E0A41) com 70% de opacidade sobre a imagem */
+    background: linear-gradient(rgba(30, 10, 65, 0.7), rgba(30, 10, 65, 0.7)), url(../img/img_agendamento_aulas_horizontal.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    font-family: 'Inria Sans', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #49438D;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    gap: 15px;
+    font-size: 16px;
+}
+
+.botao-voltar {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.botao-voltar img { 
+    width: 25px; 
+}
+
+.menu-dias {
+    background-color: #1E0A41;
+    padding: 15px 0;
+}
+
+.menu-dias ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.conteudo-aulas {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 18px;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.lista-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.card-aula {
+    background: rgba(255, 255, 255, 0.7); /* Branco semi-transparente */
+    border-radius: 40px;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+}
+
+.info-aula { 
+    text-align: left; 
+}
+
+.badge-aula {
+    background-color: #1E0A41;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 11px;
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.professor { 
+    font-size: 10px;
+    color: #333;
+}
+
+.agendamento-aula { 
+    text-align: right; 
+}
+
+.horario {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.btn-agendar {
+    background-color: #1E0A41;
+    color: white;
+    border: none;
+    padding: 4px 18px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+@media (min-width: 2559px) {
+    .lista-cards { 
+        max-width: 800px; 
+    }
+    
+    h2 { 
+        font-size: 32px; 
+    }
+    
+    .badge-aula { 
+        font-size: 18px; 
+    }
+    
+    .horario { 
+        font-size: 20px; 
+    }
+    
+    .btn-agendar { 
+        font-size: 16px; 
+        padding: 8px 25px; 
+    }
+}
+
+@media (max-width: 373px) {
+    .card-aula { 
+        padding: 10px 15px; 
+    }
+    
+    .menu-dias ul { 
+        font-size: 10px; 
+    }
+    
+    .badge-aula { 
+        font-size: 10px; 
+        padding: 4px 10px; 
+    }
+    
+    .horario { 
+        font-size: 12px; 
+    }
+}

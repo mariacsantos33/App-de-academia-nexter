@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jomhuria&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+}
+
+:root {
+    --cor-botoes-texto: #FFFFFF;
+    --cor-principal: #49438D;
+    --cor-sobreposição: #1E0A41;
+}
+
+body {
+    background-color: var(--cor-principal);
+    background-image: url(../img/img_fundo_texturizado.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--cor-botoes-texto);
+    font-family: 'Inria Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    padding: 20px;
+    height: 60px;
+}
+
+.botao-voltar {
+    background: none;
+}
+
+.botao-voltar img {
+    width: 30px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    width: 100%;
+    gap: 15px;
+}
+
+.infos {
+    background-color: var(--cor-sobreposição);
+    width: 400px;
+    padding: 30px;
+    border-radius: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 80vh;
+    flex-shrink: 1;
+}
+
+.titulo-principal {
+    font-size: 55px;
+    font-family: 'Jomhuria', cursive;
+    font-weight: normal;
+    line-height: 1;
+}
+
+.texto {
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.topicos {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+h3 {
+    font-family: 'Jomhuria', cursive;
+    font-size: 40px;
+    font-weight: normal;
+}
+
+.lista-topicos {
+    list-style: none;
+}
+
+.lista-topicos li {
+    margin-top: 8px;
+    font-size: 15px;
+    line-height: 1.2;
+}
+
+.preco {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.sifrao { font-size: 35px; margin-right: 5px; }
+.valor { font-size: 50px; }
+.periodo { color: #cccccc; margin-left: 5px; font-size: 22px; }
+
+.botao-assinar {
+    background-color: #cccccc;
+    color: var(--cor-sobreposição);
+    padding: 8px 50px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.footer {
+    margin-bottom: 20px;
+}
+
+.botao-pagina-treinos {
+    background-color: white;
+    color: var(--cor-sobreposição);
+    padding: 15px 35px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+
+@media (min-width: 2559px) {
+    .infos { 
+        width: 700px; 
+        padding: 50px; 
+    }
+    .titulo-principal { 
+        font-size: 120px; 
+    }
+    h3 { 
+        font-size: 70px; 
+    }
+    .lista-topicos li { 
+        font-size: 26px; 
+    }
+    .valor { 
+        font-size: 90px; 
+    }
+    .sifrao { 
+        font-size: 60px; 
+    }
+    .periodo { 
+        font-size: 40px; 
+    }
+    .botao-assinar { 
+        padding: 20px 80px; font-size: 24px; 
+    }
+}
+
+@media (max-width: 1438px) {
+    .infos { 
+        width: 380px; 
+    }
+}
+
+@media (max-width: 1022px) {
+    .infos { 
+        width: 350px; 
+        padding: 20px; 
+    }
+    .titulo-principal { 
+        font-size: 48px; 
+    }
+}
+
+@media (max-width: 767px) {
+    .infos { 
+        width: 90%; 
+    }
+}
+
+@media (max-width: 423px) {
+    .infos { 
+        padding: 15px; 
+    }
+    .titulo-principal { 
+        font-size: 40px; 
+    }
+    .topicos, .preco { 
+        margin-bottom: 15px; 
+    }
+}
+
+@media (max-width: 373px) {
+    .titulo-principal { 
+        font-size: 35px; 
+    }
+    .valor { 
+        font-size: 35px; 
+    }
+}
+
+@media (max-width: 318px) {
+    .infos { 
+        padding: 10px; 
+    }
+    .lista-topicos li { 
+        font-size: 13px; 
+    }
+    .periodo { 
+        font-size: 18px; }
+}

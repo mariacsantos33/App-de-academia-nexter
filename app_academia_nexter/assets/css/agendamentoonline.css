@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+}
+
+body {
+    background-color: #49438D;
+    background-image: url(../img/img_fundo_texturizado.png);
+    background-size: cover;
+    color: white;
+    font-family: 'Inria Sans', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.header-conteudo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.botao-voltar, 
+.botao-menu {
+    background: none;
+    border: none;
+}
+
+.botao-voltar img, 
+.botao-menu img {
+    width: 25px;
+}
+
+.container-agendamento {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 20px 20px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 22px;
+    font-weight: normal;
+    max-width: 300px;
+    line-height: 1.2;
+}
+
+.calendario {
+    width: 100%;
+    max-width: 380px;
+}
+
+.img-calendario {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.btn-concluir {
+    background-color: white;
+    color: #1E0A41;
+    border: none;
+    padding: 12px 0;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    width: 100%;
+    max-width: 300px;
+}
+
+
+@media (min-width: 2559px) {
+    h1 { 
+        font-size: 45px; 
+        max-width: 600px; 
+    }
+    
+    .calendario { 
+        max-width: 800px; 
+    }
+    
+    .btn-concluir { 
+        font-size: 24px; 
+        max-width: 500px; 
+        padding: 20px 0; 
+    }
+}
+
+@media (max-width: 423px) {
+    h1 { 
+        font-size: 18px; 
+    }
+    
+    .btn-concluir { 
+        font-size: 12px; 
+        padding: 10px 0; 
+    }
+    
+    .container-agendamento { 
+        padding: 10px; 
+    }
+}
+
+@media (max-width: 373px) {
+    h1 { 
+        font-size: 16px; 
+    }
+    
+    .calendario { 
+        max-width: 320px; 
+    }
+    
+    .btn-concluir { 
+        max-width: 250px; 
+    }
+}
+
+@media (max-width: 318px) {
+    h1 { 
+        font-size: 14px; 
+    }
+    
+    .btn-concluir { 
+        font-size: 11px; 
+    }
+}

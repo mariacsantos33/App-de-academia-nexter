@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+}
+
+body {
+    background-color: #49438D;
+    background-image: url(../img/img_fundo_texturizado.png);
+    background-size: cover;
+    color: white;
+    font-family: 'Inria Sans', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.header-conteudo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.botao-voltar, 
+.botao-menu {
+    background: none;
+    border: none;
+}
+
+.botao-voltar img, 
+.botao-menu img {
+    width: 25px;
+}
+
+.container-perfil {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px 20px 20px;
+}
+
+.topo-perfil {
+    text-align: center;
+}
+
+.foto-usuario img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.topo-perfil h2 {
+    font-size: 20px;
+}
+
+.topo-perfil p {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.info-pessoal {
+    width: 100%;
+    max-width: 350px;
+}
+
+.campo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.campo label {
+    font-size: 14px;
+    width: 40%;
+}
+
+.input-fake {
+    background-color: #A9B1D6; 
+    height: 25px;
+    width: 60%;
+    border-radius: 15px;
+}
+
+.outros-acessos {
+    background-color: #C4C4C4;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 30px;
+    padding: 20px;
+    text-align: center;
+    color: #1E0A41;
+}
+
+.outros-acessos h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.botoes-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.btn-acesso {
+    background-color: white;
+    color: #1E0A41;
+    border: none;
+    padding: 8px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+
+@media (min-width: 2559px) {
+    .container-perfil { 
+        max-width: 800px; 
+        margin: 0 auto; 
+    }
+    
+    .topo-perfil h2 { 
+        font-size: 40px; 
+    }
+    
+    .btn-acesso { 
+        font-size: 20px; 
+        padding: 15px; 
+    }
+}
+
+@media (max-width: 1438px) {
+    .info-pessoal { 
+        max-width: 320px; 
+    }
+}
+
+@media (max-width: 1022px) {
+    .outros-acessos { 
+        max-width: 320px; 
+    }
+}
+
+@media (max-width: 767px) {
+    .container-perfil { 
+        padding: 10px; 
+    }
+}
+
+@media (max-width: 423px) {
+    .foto-usuario img { 
+        width: 60px; 
+        height: 60px; 
+    }
+    
+    .outros-acessos { 
+        padding: 10px; 
+    }
+    
+    .btn-acesso { 
+        padding: 5px; 
+        font-size: 10px; 
+    }
+    
+    .campo label { 
+        font-size: 12px; 
+    }
+}
+
+@media (max-width: 373px) {
+    .topo-perfil h2 { 
+        font-size: 18px; 
+    }
+    
+    .input-fake { 
+        height: 20px; 
+    }
+}
+
+@media (max-width: 318px) {
+    .outros-acessos h3 { 
+        font-size: 14px; 
+    }
+}

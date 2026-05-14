@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+}
+
+body {
+    background-color: #49438D;
+    background-image: url(img_fundo_texturizado.png);
+    background-size: cover;
+    color: white;
+    font-family: 'Inria Sans', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: 60px;
+    background-color: #1E0A41;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    flex-shrink: 0;
+}
+
+.header-conteudo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.botao-voltar img, 
+.botao-menu img {
+    width: 25px;
+}
+
+.botao-voltar, 
+.botao-menu {
+    background: none;
+    border: none;
+}
+
+.container-treinos {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+    width: 100%;
+}
+
+.card-treino {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 16%;
+    border-radius: 25px;
+    overflow: hidden; /* Faz a imagem respeitar a borda redonda */
+}
+
+.imagem-fundo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.info-treino {
+    position: relative; 
+    padding-left: 25px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4); /* Escurece um pouco a foto */
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.botao-acessar {
+    background-color: #cccccc;
+    color: #000000;
+    width: fit-content;
+    padding: 4px 15px;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: bold;
+    border: none;
+}
+
+/* --- MEDIA QUERIES --- */
+
+@media (min-width: 2559px) {
+    .card-treino {
+        max-width: 800px;
+        height: 15%;
+    }
+    h2 { 
+        font-size: 45px; 
+    }
+    p { 
+        font-size: 22px; 
+    }
+    .botao-acessar { 
+        font-size: 18px; 
+    }
+}
+
+@media (max-width: 1438px) {
+    .card-treino { 
+        max-width: 380px; 
+    }
+}
+
+@media (max-width: 1022px) {
+    .card-treino { 
+        max-width: 350px; 
+    }
+}
+
+@media (max-width: 767px) {
+    .card-treino { 
+        width: 90%; 
+    }
+}
+
+@media (max-width: 423px) {
+    .card-treino { 
+        height: 14%; 
+    }
+    h2 { 
+        font-size: 18px; 
+    }
+}
+
+@media (max-width: 373px) {
+    header h1 { 
+        font-size: 14px; 
+    }
+    h2 { 
+        font-size: 16px; 
+    }
+}
+
+@media (max-width: 318px) {
+    header h1 { 
+        display: none; 
+    }
+}

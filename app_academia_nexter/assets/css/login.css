@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+}
+
+:root {
+    --cor-botoes: #FFFFFF;
+    --cor-texto: #000000;
+}
+
+body {
+    font-family: 'Inria Sans', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden; 
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+.fundo {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/img-fundo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.logo {
+    width: 220px;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; 
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; 
+}
+
+.usuario, .senha {
+    background-color: var(--cor-botoes);
+    font-family: 'Inria Sans';
+    padding: 8px 20px;
+    border-radius: 30px;
+    width: 250px;
+    outline: none;
+}
+
+.concluir-login {
+    white-space: nowrap;
+    background-color: var(--cor-botoes);
+    font-family: 'Inria Sans';
+    padding: 8px 30px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.pagina-treinos {
+    white-space: nowrap;
+    background-color: var(--cor-botoes);
+    font-family: 'Inria Sans';
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+@media (min-width: 2559px) {
+    .logo {
+        width: 400px;
+    }
+    .usuario, .senha {
+        width: 400px;
+        padding: 15px 30px;
+        font-size: 20px;
+    }
+    .concluir-login, .pagina-treinos {
+        font-size: 20px;
+        padding: 15px 50px;
+    }
+}
+
+@media (max-width: 1438px) {
+    .logo {
+        width: 200px;
+    }
+}
+
+@media (max-width: 1022px) {
+    .fundo {
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .usuario, .senha {
+        width: 220px;
+    }
+}
+
+@media (max-width: 423px) {
+    .logo {
+        width: 180px;
+    }
+    .usuario, .senha {
+        width: 200px;
+    }
+}
+
+@media (max-width: 373px) {
+    .concluir-login, .pagina-treinos {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 318px) {
+    .usuario, .senha {
+        width: 180px;
+    }
+}
