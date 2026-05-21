@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-gradient: linear-gradient(135deg, #4c4499 0%, #2c2463 100%);
+    --card-bg: #140836;
+    --text-white: #ffffff;
+    --text-gray: #bdafde;
+    --btn-white: #ffffff;
+    --accent-green: #4ade80;
+}
+
+body {
+    background: var(--bg-gradient);
+    min-height: 100vh;
+    color: var(--text-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.logo-sub {
+    font-weight: 400;
+    font-size: 0.9rem;
+    display: block;
+    margin-top: -5px;
+    border-top: 1px solid var(--text-white);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu a {
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    opacity: 0.8;
+    transition: opacity 0.3s, border-bottom 0.3s;
+    padding-bottom: 5px;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+    opacity: 1;
+    border-bottom: 2px solid var(--text-white);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-white);
+    border-radius: 2px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.back-button-top {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    background: none;
+    border: none;
+    color: var(--text-white);
+    cursor: pointer;
+    display: none;
+}
+
+.plan-detail-card {
+    background-color: var(--card-bg);
+    border-radius: 40px;
+    padding: 50px 40px;
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    margin-bottom: 40px;
+}
+
+.plan-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.plan-description {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    max-width: 320px;
+}
+
+.plan-features {
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 40px;
+}
+
+.plan-features h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.plan-features ul {
+    list-style: none;
+}
+
+.plan-features li {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 30px;
+    line-height: 1.4;
+}
+
+.plan-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: -2px;
+    color: var(--accent-green);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.plan-price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 40px;
+}
+
+.plan-price .currency {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.plan-price .price-value {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.plan-price .period {
+    color: var(--text-gray);
+    font-size: 1rem;
+}
+
+.btn-subscribe {
+    background-color: var(--btn-white);
+    color: var(--card-bg);
+    border: none;
+    padding: 12px 0;
+    width: 100%;
+    max-width: 220px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    letter-spacing: 1px;
+}
+
+.btn-subscribe:hover {
+    opacity: 0.9;
+}
+
+.btn-footer {
+    background-color: var(--btn-white);
+    color: #2c2463;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-footer:hover {
+    background-color: #2c2463;
+    color: var(--btn-white);
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 20px;
+    }
+    .back-button-top {
+        display: block;
+    }
+    .container {
+        padding-top: 60px;
+    }
+    .plan-detail-card {
+        padding: 40px 25px;
+        border-radius: 35px;
+    }
+    .plan-title {
+        font-size: 1.8rem;
+    }
+    .plan-price .price-value {
+        font-size: 3rem;
+    }
+    .btn-footer {
+        width: 100%;
+        max-width: 320px;
+        font-size: 0.8rem;
+    }
+}

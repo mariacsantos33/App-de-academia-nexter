@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-gradient: linear-gradient(135deg, #4c4499 0%, #2c2463 100%);
+    --bg-dark-purple: #3e367c;
+    --card-bg: #140836;
+    --text-white: #ffffff;
+    --text-gray: #bdafde;
+    --btn-purple: #53469c;
+    --btn-white: #ffffff;
+}
+
+body {
+    background: var(--bg-gradient);
+    min-height: 100vh;
+    color: var(--text-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.logo-sub {
+    font-weight: 400;
+    font-size: 0.9rem;
+    display: block;
+    margin-top: -5px;
+    border-top: 1px solid var(--text-white);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu a {
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    opacity: 0.8;
+    transition: opacity 0.3s, border-bottom 0.3s;
+    padding-bottom: 5px;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+    opacity: 1;
+    border-bottom: 2px solid var(--text-white);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-white);
+    border-radius: 2px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.back-button-top {
+    position: absolute;
+    left: 20px;
+    top: 40px;
+    background: none;
+    border: none;
+    color: var(--text-white);
+    cursor: pointer;
+    display: none;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.plan-card {
+    background-color: var(--card-bg);
+    border-radius: 40px;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    min-height: 280px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+}
+
+.plan-card h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.plan-card p {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 20px 0;
+}
+
+.btn-more {
+    background-color: var(--btn-white);
+    color: var(--card-bg);
+    border: none;
+    padding: 8px 35px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn-more:hover {
+    opacity: 0.9;
+}
+
+.btn-footer {
+    background-color: var(--btn-white);
+    color: #2c2463;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-footer:hover {
+    background-color: #2c2463;
+    color: var(--btn-white);
+}
+
+@media (max-width: 968px) {
+    .plans-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .nav-menu {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 20px;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .back-button-top {
+        display: block;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .plans-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .plan-card {
+        border-radius: 35px;
+        padding: 30px 20px;
+        min-height: auto;
+    }
+
+    .plan-card p {
+        font-size: 0.9rem;
+    }
+
+    .btn-footer {
+        width: 100%;
+        max-width: 320px;
+        font-size: 0.8rem;
+    }
+}

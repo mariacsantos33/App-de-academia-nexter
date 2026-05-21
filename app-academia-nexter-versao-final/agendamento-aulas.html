@@ -1,0 +1,91 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlphaClub - Agendamento</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="assets/css/agendamento-aulas.css">
+</head>
+<body>
+    <div class="conteiner-app">
+        
+        <header class="header-treinos">
+            <div class="logo-container">
+                <div class="logo-placeholder">ALPHA <span>CLUB</span></div>
+            </div>
+            <nav class="menu-navegacao">
+                <ul>
+                    <li><a href="inicioelogin.html">HOME</a></li>
+                    <li><a href="treinos.html">TREINOS</a></li>
+                    <li><a href="aulas.html" class="item-ativo">AULAS</a></li>
+                    <li><a href="#">PLANOS</a></li>
+                    <li><a href="#">PERFIL</a></li>
+                    <li><a href="#">DESAFIOS</a></li>
+                    <li><a href="#">CHAT EM GRUPO</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="conteudo-treinos">
+            <h2 class="titulo-pagina">SELECIONE O DIA E HORÁRIO:</h2>
+            
+            <div class="calendario-container">
+                <div class="dias-semana">
+                    <div class="dia-card">
+                        <span class="nome-dia">SEG</span>
+                        <span class="num-dia">25</span>
+                    </div>
+                    <div class="dia-card ativo">
+                        <span class="nome-dia">TER</span>
+                        <span class="num-dia">26</span>
+                    </div>
+                    <div class="dia-card">
+                        <span class="nome-dia">QUA</span>
+                        <span class="num-dia">27</span>
+                    </div>
+                    <div class="dia-card">
+                        <span class="nome-dia">QUI</span>
+                        <span class="num-dia">28</span>
+                    </div>
+                    <div class="dia-card">
+                        <span class="nome-dia">SEX</span>
+                        <span class="num-dia">29</span>
+                    </div>
+                    <div class="dia-card">
+                        <span class="nome-dia">SÁB</span>
+                        <span class="num-dia">30</span>
+                    </div>
+                </div>
+
+                <div class="grade-horarios">
+                    <div class="item-horario">
+                        <span class="hora">07:30 - 08:20</span>
+                        <span class="vagas">4 vagas restantes</span>
+                        <a href="confirmacao.html" class="botao-confirmar">RESERVAR</a>
+                    </div>
+                    <div class="item-horario">
+                        <span class="hora">10:40 - 11:20</span>
+                        <span class="vagas">1 vaga restante</span>
+                        <a href="confirmacao.html" class="botao-confirmar">RESERVAR</a>
+                    </div>
+                    <div class="item-horario esgotado">
+                        <span class="hora">13:30 - 14:10</span>
+                        <span class="vagas">Esgotado</span>
+                        <a class="botao-confirmar desabilitado">LOTADO</a>
+                    </div>
+                    <div class="item-horario">
+                        <span class="hora">15:10 - 16:00</span>
+                        <span class="vagas">8 vagas restantes</span>
+                        <a href="confirmacao.html" class="botao-confirmar">RESERVAR</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="rodape-treinos">
+            <a href="aulas.html" class="botao-voltar-inicio">Voltar para Aulas</a>
+        </footer>
+    </div>
+</body>
+</html>

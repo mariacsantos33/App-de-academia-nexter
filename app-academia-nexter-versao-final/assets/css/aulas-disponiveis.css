@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+}
+
+body {
+    font-family: 'Inria Sans', sans-serif;
+    background-image: linear-gradient(135deg, rgba(68, 50, 155, 0.85) 0%, rgba(32, 19, 77, 0.92) 100%), url(../img/img-fundo-aulas.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.conteiner-app {
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header-treinos {
+    width: 100%;
+    padding: 25px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-placeholder {
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+}
+
+.logo-placeholder span {
+    font-weight: 300;
+    opacity: 0.8;
+}
+
+.menu-navegacao ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.menu-navegacao a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding-bottom: 6px;
+    transition: all 0.2s ease;
+}
+
+.menu-navegacao a:hover {
+    color: #FFFFFF;
+}
+
+.menu-navegacao .item-ativo {
+    color: #FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
+}
+
+.conteudo-treinos {
+    flex: 1;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.titulo-pagina {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.grid-aulas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card-aula {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.card-aula:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.22);
+}
+
+.bloco-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tag-modalidade {
+    background-color: #1A0736;
+    color: #FFFFFF;
+    padding: 6px 16px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: inline-block;
+    width: fit-content;
+}
+
+.professor {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 300;
+}
+
+.bloco-horario {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.horario {
+    font-size: 18px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.dias {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 6px;
+}
+
+.botao-agendar {
+    display: inline-block;
+    background-color: #1A0736;
+    color: #FFFFFF !important;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 6px 20px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.botao-agendar:hover {
+    background-color: #FFFFFF;
+    color: #1A0736 !important;
+}
+
+.aula-destaque {
+    grid-column: span 2;
+}
+
+.rodape-treinos {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.botao-voltar-inicio {
+    width: 100%;
+    max-width: 280px;
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 25px;
+    padding: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 13px;
+    transition: all 0.2s ease;
+}
+
+.botao-voltar-inicio:hover {
+    background-color: #FFFFFF;
+    color: #20134D;
+}
+
+@media (max-width: 1023px) {
+    .conteiner-app {
+        max-width: 450px;
+    }
+
+    .header-treinos {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .menu-navegacao ul {
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .menu-navegacao a {
+        font-size: 11px;
+    }
+
+    .conteudo-treinos {
+        padding: 20px;
+    }
+
+    .grid-aulas {
+        grid-template-columns: 1fr;
+    }
+
+    .aula-destaque {
+        grid-column: span 1;
+    }
+
+    .card-aula {
+        padding: 15px 20px;
+    }
+}

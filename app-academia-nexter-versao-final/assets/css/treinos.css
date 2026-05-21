@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+}
+
+body {
+    font-family: 'Inria Sans', sans-serif;
+    background: linear-gradient(rgba(73, 67, 141, 0.9), rgba(30, 10, 65, 0.95));
+    color: #FFFFFF;
+    height: 100vh;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+}
+
+.conteiner-app {
+    width: 100%;
+    max-width: 450px; 
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-treinos {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.header-treinos h1 {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.menu-navegacao {
+    width: 100%;
+}
+
+.menu-navegacao ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+.menu-navegacao a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding-bottom: 4px;
+    transition: color 0.2s ease;
+}
+
+.menu-navegacao a:hover {
+    color: #FFFFFF;
+}
+
+.menu-navegacao .item-ativo {
+    color: #FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
+}
+
+.conteudo-treinos {
+    flex: 1;
+    overflow-y: auto; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.conteudo-treinos::-webkit-scrollbar {
+    width: 0px;
+}
+
+.card-treino {
+    width: 100%;
+    height: 130px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+}
+
+.card-treino:hover {
+    transform: scale(1.02);
+}
+
+.info-treino h2 {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.info-treino p {
+    font-size: 13px;
+    font-weight: 300;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+.treino-a {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), 
+                      url(../img/treino_a.jpg);
+}
+
+.treino-b {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), 
+                      url(../img/treino_b.jpg);
+}
+
+.treino-c {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), 
+                      url(../img/treino_c.jpg);
+}
+
+.treino-d {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), 
+                      url(../img/treino_d.jpg);
+}
+
+.treino-e {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), 
+                      url(../img/treino_e.jpg);
+}
+
+.botao-acessar-treino {
+    align-self: flex-start;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #1E0A41;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 15px;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.rodape-treinos {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(30, 10, 65, 0.4);
+}
+
+.botao-voltar-inicio {
+    width: 100%;
+    max-width: 280px;
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 25px;
+    padding: 12px;
+    font-family: 'Inria Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.botao-voltar-inicio:hover {
+    background-color: #FFFFFF;
+    color: #1E0A41;
+}
+
+@media (min-width: 1024px) {
+    .conteiner-app {
+        max-width: 1200px;
+    }
+
+    .header-treinos {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 30px 40px;
+    }
+
+    .header-treinos h1 {
+        font-size: 26px;
+    }
+
+    .menu-navegacao {
+        width: auto;
+    }
+
+    .menu-navegacao ul {
+        gap: 30px;
+    }
+
+    .menu-navegacao a {
+        font-size: 14px;
+    }
+
+    .conteudo-treinos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        padding: 40px;
+    }
+
+    .treino-e {
+        grid-column: span 2; 
+        height: 140px;
+    }
+
+    .card-treino {
+        height: 180px;
+        padding: 30px;
+    }
+
+    .info-treino h2 {
+        font-size: 32px;
+    }
+
+    .info-treino p {
+        font-size: 16px;
+    }
+
+    .botao-acessar-treino {
+        font-size: 13px;
+        padding: 8px 22px;
+        border-radius: 20px;
+    }
+
+    .rodape-treinos {
+        background-color: transparent;
+        padding-bottom: 40px;
+    }
+}
+
+@media (max-width: 375px) {
+    .header-treinos {
+        padding: 15px 10px;
+        gap: 10px;
+    }
+    
+    .header-treinos h1 {
+        font-size: 15px;
+    }
+
+    .menu-navegacao a {
+        font-size: 11px;
+    }
+
+    .conteudo-treinos {
+        padding: 15px;
+        gap: 12px;
+    }
+
+    .card-treino {
+        height: 115px;
+        padding: 15px;
+    }
+
+    .info-treino h2 {
+        font-size: 20px;
+    }
+    
+    .info-treino p {
+        font-size: 12px;
+    }
+}

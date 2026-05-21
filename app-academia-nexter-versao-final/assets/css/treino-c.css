@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+}
+
+body {
+    font-family: 'Inria Sans', sans-serif;
+    background-color: #1E0A41;
+    color: #FFFFFF;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.conteiner-app {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #49438D;
+}
+
+.header-global {
+    width: 100%;
+    padding: 20px;
+    background-color: #49438D;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 10;
+}
+
+.menu-navegacao {
+    width: 100%;
+}
+
+.menu-navegacao ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+.menu-navegacao a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding-bottom: 4px;
+    transition: color 0.2s ease;
+}
+
+.menu-navegacao a:hover {
+    color: #FFFFFF;
+}
+
+.menu-navegacao .item-ativo {
+    color: #FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
+}
+
+.banner-treino-c {
+    width: 100%;
+    height: 140px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+}
+
+.banner-conteudo h1 {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+.banner-conteudo p {
+    font-size: 14px;
+    font-weight: 300;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+.conteudo-exercicios {
+    flex: 1;
+    overflow-y: auto;
+    background-color: #E6E6E6;
+    display: flex;
+    flex-direction: column;
+}
+
+.conteudo-exercicios::-webkit-scrollbar {
+    width: 0px;
+}
+
+.card-exercicio {
+    background-color: #FFFFFF;
+    border-bottom: 3px solid #49438D;
+    padding: 20px;
+    display: flex;
+    gap: 15px;
+    color: #333333;
+}
+
+.detalhes-exercicio {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.detalhes-exercicio h2 {
+    font-size: 18px;
+    color: #1E0A41;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.detalhes-exercicio .descricao {
+    font-size: 11px;
+    color: #555555;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.meta-exercicio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.campo-carga {
+    display: flex;
+    align-items: center;
+    background-color: #EBEBEB;
+    border-radius: 15px;
+    padding: 6px 12px;
+    gap: 8px;
+    width: 58%;
+}
+
+.icone-haltere {
+    width: 14px;
+    height: 6px;
+    background-color: #777777;
+    position: relative;
+    border-radius: 2px;
+}
+.icone-haltere::before, .icone-haltere::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    width: 4px;
+    height: 14px;
+    background-color: #555555;
+    border-radius: 1px;
+}
+.icone-haltere::before { left: -2px; }
+.icone-haltere::after { right: -2px; }
+
+.input-carga {
+    border: none;
+    background: transparent;
+    font-size: 11px;
+    font-family: 'Inria Sans', sans-serif;
+    color: #333333;
+    outline: none;
+    width: 100%;
+}
+
+.series-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 38%;
+}
+
+.input-series {
+    width: 100%;
+    background-color: #EBEBEB;
+    color: #1E0A41;
+    font-family: 'Inria Sans', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 4px 6px;
+    border-radius: 10px;
+    border: 1px solid #CCCCCC;
+    text-align: center;
+    outline: none;
+}
+
+.subtexto-clique, .instrucao-clique {
+    font-size: 8px;
+    color: #777777;
+    text-align: center;
+}
+
+.instrucao-clique {
+    align-self: flex-end;
+    margin-top: 2px;
+}
+
+.imagem-exercicio {
+    width: 110px;
+    height: 110px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-self: center;
+}
+
+.ex-elevacao { background-image: url(../img/execução-elev-pelvica.png); }
+.ex-bulgaro { background-image: url(../img/execução-bulgaro.png); }
+.ex-coice { background-image: url(../img/execução-coice.png); }
+.ex-stiff { background-image: url(../img/execução-stiff.png); }
+
+.bloco-conclusao {
+    background-color: #312A6C;
+    padding: 30px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.bloco-conclusao h3 {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.botao-concluir {
+    background-color: #6159B3;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 8px 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: background 0.2s;
+}
+
+.botao-concluir:hover {
+    background-color: #FFFFFF;
+    color: #1E0A41;
+}
+
+@media (min-width: 1024px) {
+    .conteiner-app {
+        max-width: 1200px;
+    }
+
+    .header-global {
+        padding: 25px 40px;
+    }
+
+    .menu-navegacao ul {
+        max-width: 500px;
+    }
+
+    .menu-navegacao a {
+        font-size: 14px;
+    }
+
+    .banner-treino-c {
+        height: 180px;
+        padding: 40px;
+    }
+
+    .banner-conteudo h1 {
+        font-size: 48px;
+    }
+
+    .conteudo-exercicios {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        background-color: #E6E6E6;
+        gap: 2px;
+    }
+
+    .card-exercicio {
+        border-bottom: none;
+    }
+
+    .bloco-conclusao {
+        grid-column: span 2;
+        padding: 40px;
+    }
+}

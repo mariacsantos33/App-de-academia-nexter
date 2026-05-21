@@ -1,0 +1,115 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Club - Agendamento de Avaliação Física</title>
+    <link rel="stylesheet" href="assets/css/agendamento-avaliacao.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="assets/img/alpha-club-logo.png" alt="ALPHA CLUB" class="logo-img">
+        </div>
+        <nav class="nav-menu">
+            <a href="#">HOME</a>
+            <a href="#">TREINOS</a>
+            <a href="#" class="active">AULAS</a>
+            <a href="#">PLANOS</a>
+            <a href="#">PERFIL</a>
+            <a href="#">DESAFIOS</a>
+            <a href="#">CHAT EM GRUPO</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="main-title">FAÇA O AGENDAMENTO DA SUA AVALIAÇÃO FÍSICA</h1>
+
+        <div class="booking-panel">
+            
+            <div class="date-selector">
+                <div class="date-card">
+                    <span class="day">SEG</span>
+                    <span class="date">25</span>
+                </div>
+                <div class="date-card active">
+                    <span class="day">TER</span>
+                    <span class="date">26</span>
+                </div>
+                <div class="date-card">
+                    <span class="day">QUA</span>
+                    <span class="date">27</span>
+                </div>
+                <div class="date-card">
+                    <span class="day">QUI</span>
+                    <span class="date">28</span>
+                </div>
+                <div class="date-card">
+                    <span class="day">SEX</span>
+                    <span class="date">29</span>
+                </div>
+                <div class="date-card">
+                    <span class="day">SÁB</span>
+                    <span class="date">30</span>
+                </div>
+            </div>
+
+            <div class="schedule-grid">
+                <div class="grid-header">Seg</div>
+                <div class="grid-header">Ter</div>
+                <div class="grid-header">Qua</div>
+                <div class="grid-header">Qui</div>
+                <div class="grid-header">Sex</div>
+                <div class="grid-header">Sáb</div>
+                <div class="grid-header">Dom</div>
+
+                <div class="time-slot">07:00</div>
+                <button class="status-btn reservado">Reservar</button>
+                <button class="status-btn reservado">Reservar</button>
+                <button class="status-btn reservado">Reservar</button>
+                <button class="status-btn reservado">Reservar</button>
+                <button class="status-btn reservado">Reservar</button>
+                <button class="status-btn reservado">Reservar</button>
+                <button class="status-btn lotado" disabled>Lotado</button>
+
+                <div class="time-slot">08:00</div>
+                <button class="status-btn reservado">Reservar</button>
+                <button class="status-btn selecionado">Reservar</button> <button class="status-btn reservado">Reservar</button>
+                <button class="status-btn reservado">Reservar</button>
+                <button class="status-btn reservado">Reservar</button>
+                <button class="status-btn reservado">Reservar</button>
+                <button class="status-btn reservado">Reservar</button>
+
+                <div class="time-slot">09:00</div>
+                <button class="status-btn reservado">Reservar</button>
+                <button class="status-btn reservado">Reservar</button>
+                <button class="status-btn reservado">Reservar</button>
+                <button class="status-btn reservado">Reservar</button>
+                <button class="status-btn reservado">Reservar</button>
+                <button class="status-btn reservado">Reservar</button>
+                <button class="status-btn reservado">Reservar</button>
+
+                <div class="time-slot">12:00</div>
+                <button class="status-btn reservado">Reservar</button>
+                <button class="status-btn lotado" disabled>Lotado</button>
+                <button class="status-btn reservado">Reservar</button>
+                <button class="status-btn reservado">Reservar</button>
+                <button class="status-btn reservado">Reservar</button>
+                <button class="status-btn lotado" disabled>Lotado</button>
+                <button class="status-btn lotado" disabled>Lotado</button>
+
+            </div>
+
+            <div class="legend">
+                <div class="legend-item">
+                    <span class="dot reservado"></span> Reservar
+                </div>
+                <div class="legend-item">
+                    <span class="dot lotado"></span> Lotado
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

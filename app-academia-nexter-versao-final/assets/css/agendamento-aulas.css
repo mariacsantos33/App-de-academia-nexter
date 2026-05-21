@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+}
+
+body {
+    font-family: 'Inria Sans', sans-serif;
+    background-image: linear-gradient(135deg, rgba(68, 50, 155, 0.85) 0%, rgba(32, 19, 77, 0.92) 100%);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.conteiner-app {
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header-treinos {
+    width: 100%;
+    padding: 25px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-placeholder {
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+}
+
+.logo-placeholder span {
+    font-weight: 300;
+    opacity: 0.8;
+}
+
+.menu-navegacao ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.menu-navegacao a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding-bottom: 6px;
+    transition: all 0.2s ease;
+}
+
+.menu-navegacao a:hover {
+    color: #FFFFFF;
+}
+
+.menu-navegacao .item-ativo {
+    color: #FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
+}
+
+.conteudo-treinos {
+    flex: 1;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.titulo-pagina {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.grid-aulas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card-aula {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.card-aula:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.22);
+}
+
+.bloco-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tag-modalidade {
+    background-color: #1A0736;
+    color: #FFFFFF;
+    padding: 6px 16px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: inline-block;
+    width: fit-content;
+}
+
+.professor {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 300;
+}
+
+.bloco-horario {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.horario {
+    font-size: 18px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.dias {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 6px;
+}
+
+.botao-agendar {
+    display: inline-block;
+    background-color: #1A0736;
+    color: #FFFFFF !important;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 6px 20px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.botao-agendar:hover {
+    background-color: #FFFFFF;
+    color: #1A0736 !important;
+}
+
+.aula-destaque {
+    grid-column: span 2;
+}
+
+
+.calendario-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 30px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.dias-semana {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+}
+
+.dia-card {
+    background: rgba(26, 7, 54, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.dia-card:hover {
+    background: rgba(26, 7, 54, 0.8);
+    transform: translateY(-2px);
+}
+
+.dia-card.ativo {
+    background: #FFFFFF;
+    color: #1A0736;
+    border-color: #FFFFFF;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+.nome-dia {
+    font-size: 12px;
+    font-weight: 700;
+    opacity: 0.7;
+}
+
+.dia-card.ativo .nome-dia {
+    opacity: 1;
+}
+
+.num-dia {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.grade-horarios {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.item-horario {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.hora {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.vagas {
+    font-size: 13px;
+    font-weight: 300; 
+}
