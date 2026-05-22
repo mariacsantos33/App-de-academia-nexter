@@ -1,0 +1,102 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlphaClub - Alterar Cadastro</title>
+    <link rel="stylesheet" href="assets/css/alterarcadastro.css">
+</head>
+<body>
+    <div class="conteiner-app">
+        
+        <header class="header-treinos">
+            <div class="logo"> 
+                <img src="assets/img/logo_app.png" alt="Logo AlphaClub">
+            </div>
+            <nav class="menu-navegacao">
+                <ul>
+                    <li><a href="inicioelogin.html" class="item-ativo">Home</a></li>
+                    <li><a href="treinos.html">Treinos</a></li>
+                    <li><a href="aulas-disponiveis.html">Aulas</a></li>
+                    <li><a href="planos.html">Planos</a></li>
+                    <li><a href="perfil.html">Perfil</a></li>
+                    <li><a href="desafios.html">Desafios</a></li>
+                    <li><a href="chat.html">Chat em grupo</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="conteudo-treinos">
+            <h2 class="titulo-pagina">Alterar Cadastro</h2>
+
+            <div class="cadastro-container">
+                <form class="formulario-cadastro">
+                    
+                    <div class="secao-form">
+                        <h3>1. Dados de Acesso</h3>
+                        <div class="grupo-campo">
+                            <label>Nome completo:</label>
+                            <input type="text" value="Nome do Usuário Atual">
+                        </div>
+                        <div class="grupo-campo">
+                            <label>E-mail:</label>
+                            <input type="email" value="usuario@email.com">
+                        </div>
+                        <div class="linha-dupla">
+                            <div class="grupo-campo">
+                                <label>Senha Atual:</label>
+                                <input type="password" placeholder="••••••••">
+                            </div>
+                            <div class="grupo-campo">
+                                <label>Nova Senha:</label>
+                                <input type="password" placeholder="Nova senha">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="secao-form">
+                        <h3>2. Dados Corporais</h3>
+                        <div class="linha-dupla">
+                            <div class="grupo-campo">
+                                <label>Data de Nascimento:</label>
+                                <input type="text" value="25/04/2000">
+                            </div>
+                            <div class="grupo-campo">
+                                <label>Gênero:</label>
+                                <input type="text" value="Masculino">
+                            </div>
+                        </div>
+                        <div class="linha-dupla">
+                            <div class="grupo-campo">
+                                <label>Peso atual (kg):</label>
+                                <input type="text" value="78">
+                            </div>
+                            <div class="grupo-campo">
+                                <label>Altura (cm):</label>
+                                <input type="text" value="175">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="secao-form">
+                        <h3>3. Preferências e Painel</h3>
+                        <div class="grupo-campo">
+                            <label>Objetivo principal:</label>
+                            <input type="text" value="Emagrecer">
+                        </div>
+                        <div class="grupo-campo">
+                            <label>Frequência semanal desejada:</label>
+                            <input type="text" value="4 dias na semana">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-salvar">SALVAR ALTERAÇÕES</button>
+                </form>
+            </div>
+        </main>
+
+        <footer class="rodape-treinos">
+            <a href="perfil.html" class="botao-voltar-inicio">Voltar ao Perfil</a>
+        </footer>
+    </div>
+</body>
+</html>

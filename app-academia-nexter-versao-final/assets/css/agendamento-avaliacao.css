@@ -16,7 +16,7 @@ body {
     align-items: center;
 }
 
-.navbar {
+.header-treinos {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -26,29 +26,32 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.logo-img {
+.logo img {
     height: 40px;
+    display: block;
 }
 
-.nav-menu {
+.menu-navegacao ul {
     display: flex;
     gap: 25px;
+    list-style: none;
 }
 
-.nav-menu a {
+.menu-navegacao a {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.9rem;
     font-weight: 600;
     transition: color 0.3s ease;
+    display: inline-block;
 }
 
-.nav-menu a:hover,
-.nav-menu a.active {
+.menu-navegacao a:hover,
+.menu-navegacao .item-ativo {
     color: #ffffff;
 }
 
-.nav-menu a.active::after {
+.menu-navegacao .item-ativo::after {
     content: '';
     display: block;
     width: 100%;
@@ -232,7 +235,7 @@ body {
 }
 
 @media (max-width: 968px) {
-    .navbar {
+    .header-treinos {
         padding: 20px;
     }
     .booking-panel {
@@ -241,8 +244,14 @@ body {
 }
 
 @media (max-width: 768px) {
-    .nav-menu {
-        display: none;
+    .header-treinos {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .menu-navegacao ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     .main-title {
         font-size: 1.4rem;

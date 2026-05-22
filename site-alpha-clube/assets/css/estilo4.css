@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@200;300;400;500;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#020214;
+    font-family:"DM Sans", sans-serif;
+}
+
+/* TOPO */
+
+.topo{
+    height:110px;
+    width: 1260px;
+    background:#1A1835;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 30px;
+    color:white;
+}
+
+.logo{
+    width:200px;
+}
+
+
+.layout{
+    display:flex;
+}
+
+
+.barra-lateral{
+    width:270px;
+    height:600px;
+    background:#1A1835;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    padding:20px 15px;
+}
+
+.menu{
+    display:flex;
+    flex-direction:column;
+    gap:35px;
+}
+
+.btn{
+    height:45px;
+    width: 230px;
+    border-radius:20px;
+    color: black;
+    background:#5DDCF5;
+    font-family: "DM Sans";
+}
+
+.ativo{
+    background:#64e7ff;
+}
+
+
+.bottom-menu{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.perfil{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:white;
+}
+
+.perfil img{
+    width:75px;
+    height: 70px;
+}
+
+.sair img{
+    width:60px;
+    height: 50px;
+}
+
+
+.conteudo{
+    flex:1;
+    padding:30px;
+}
+
+.conteudo h1{
+    color:white;
+    font-size:32px;
+}
+
+.subtitulo{
+    color:#B5B5B5;
+    margin-top:8px;
+}
+
+
+.pesquisa{
+    width:960px;
+    height:50px;
+    background:#2B2738;
+    border-radius:12px;
+    margin-top:30px;
+    display:flex;
+    align-items:center;
+    padding:0 20px;
+    gap:15px;
+}
+
+.pesquisa img{
+    width:22px;
+}
+
+.pesquisa input{
+    flex:1;
+    background:none;
+    border:none;
+    color:white;
+}
+
+.pesquisa input::placeholder{
+    color:#8f8f8f;
+}
+
+
+.painel{
+    display:flex;
+    gap:30px;
+    margin-top:25px;
+}
+
+
+.lista-alunos{
+    width:350px;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+
+.card{
+    background:#1C1C22;
+    border-radius:12px;
+    color:white;
+    padding:20px;
+    width: 400px;
+}
+
+.top-card{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.foto{
+    width:55px;
+}
+
+.top-card h2{
+    font-size:20px;
+}
+
+.top-card p{
+    color:#A8A8A8;
+    font-size:14px;
+}
+
+
+.infos{
+    display:flex;
+    justify-content:space-between;
+    margin-top:20px;
+    font-size:13px;
+}
+
+.infos div{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.infos img{
+    width:16px;
+}
+
+
+.linha{
+    height:1px;
+    background:#3a3a3a;
+    margin:18px 0;
+}
+
+
+.rodape{
+    display:flex;
+    justify-content:space-between;
+    font-size:13px;
+}
+
+
+.sem-aluno{
+    width:520px;
+    height:390px;
+    background:#1C1C22;
+    border-radius:12px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    margin-left: 60px;
+}
+
+.sem-aluno img{
+    width:90px;
+}
+
+.sem-aluno p{
+    width:220px;
+    text-align:center;
+    color:#8f8f8f;
+}
+
+.botao-sair{
+    background-color: #5DDCF5;
+    color: black;
+    border-radius: 15px;
+    width: 90px;
+    height: 40px;
+}
+
+.botao-perfil{
+    background-color: #5DDCF5;
+    color: black;
+    border-radius: 15px;
+    width: 90px;
+    height: 40px;
+}
+
+.botao-perfil-mariana{
+    background-color: #5DDCF5;
+    color: black;
+    border-radius: 15px;
+    width: 100px;
+    height: 25px;
+    margin-left: 10px;
+    margin-bottom: 16px;
+}
+
+.botao-perfil-mariana:hover{
+    background-color: transparent;
+    color: #5DDCF5;
+}
+
+
+

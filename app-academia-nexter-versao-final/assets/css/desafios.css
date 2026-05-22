@@ -1,95 +1,81 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-:root {
-    --bg-gradient: linear-gradient(135deg, #4c4499 0%, #2c2463 100%);
-    --card-bg: #140836;
-    --text-white: #ffffff;
-    --text-gray: #bdafde;
-    --btn-white: #ffffff;
-    --accent-green: #4ade80;
+    text-decoration: none;
+    border: none;
 }
 
 body {
-    background: var(--bg-gradient);
+    font-family: 'Inria Sans', sans-serif;
+    background-color: #49438D;
+    color: #FFFFFF;
     min-height: 100vh;
-    color: var(--text-white);
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
-.navbar {
+.conteiner-app {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+header {
+    width: 100%;
+    padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
-}
-
-.logo-link {
-    text-decoration: none;
-    color: inherit;
+    background: linear-gradient(180deg, rgba(30, 10, 65, 0.5) 0%, rgba(0,0,0,0) 100%);
+    z-index: 10;
 }
 
 .logo {
+    font-size: 24px;
     font-weight: 700;
-    font-size: 1.5rem;
     letter-spacing: 1px;
+    text-transform: uppercase;
+    font-style: italic;
 }
 
-.logo-sub {
-    font-weight: 400;
-    font-size: 0.9rem;
-    display: block;
-    margin-top: -5px;
-    border-top: 1px solid var(--text-white);
+.logo span {
+    color: #4a90e2;
 }
 
-.nav-menu {
+nav ul {
     display: flex;
-    gap: 25px;
+    list-style: none;
+    gap: 30px;
 }
 
-.nav-menu a {
-    color: var(--text-white);
+nav ul li a {
+    color: #FFFFFF;
     text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
     opacity: 0.8;
-    transition: opacity 0.3s, border-bottom 0.3s;
-    padding-bottom: 5px;
+    transition: opacity 0.2s;
 }
 
-.nav-menu a:hover, .nav-menu a.active {
+nav ul li a:hover, nav ul li a.ativo {
     opacity: 1;
-    border-bottom: 2px solid var(--text-white);
-}
-
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-}
-
-.menu-toggle span {
-    width: 25px;
-    height: 3px;
-    background-color: var(--text-white);
-    border-radius: 2px;
+    border-bottom: 2px solid #FFFFFF;
+    padding-bottom: 4px;
 }
 
 .container {
     width: 100%;
     max-width: 1100px;
+    margin: 0 auto;
     padding: 40px 20px;
     display: flex;
     flex-direction: column;
@@ -101,404 +87,25 @@ body {
     position: absolute;
     left: 20px;
     top: 40px;
-    background: none;
-    border: none;
-    color: var(--text-white);
+    color: #FFFFFF;
     cursor: pointer;
-    display: none;
+    display: flex;
+    align-items: center;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.back-button-top:hover {
+    opacity: 1;
 }
 
 .title {
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 700;
     letter-spacing: 2px;
-    margin-bottom: 50px;
-    text-align: center;
-}
-
-.plans-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    width: 100%;
-    margin-bottom: 50px;
-}
-
-.plan-card {
-    background-color: var(--card-bg);
-    border-radius: 40px;
-    padding: 40px 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: space-between;
-    min-height: 280px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s;
-}
-
-.plan-card:hover {
-    transform: translateY(-5px);
-}
-
-.plan-card h2 {
-    font-size: 1.4rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-.plan-card p {
-    color: var(--text-gray);
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin: 20px 0;
-}
-
-.btn-more {
-    display: inline-block;
-    text-decoration: none;
-    text-align: center;
-    background-color: var(--btn-white);
-    color: var(--card-bg);
-    border: none;
-    padding: 8px 35px;
-    border-radius: 20px;
-    font-weight: 700;
-    font-size: 0.85rem;
-    cursor: pointer;
-    transition: opacity 0.2s;
-}
-
-.btn-more:hover {
-    opacity: 0.9;
-}
-
-.plan-detail-card {
-    background-color: var(--card-bg);
-    border-radius: 40px;
-    padding: 50px 40px;
-    width: 100%;
-    max-width: 450px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
     margin-bottom: 40px;
-}
-
-.plan-title {
-    font-size: 2.2rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
     text-align: center;
-}
-
-.plan-description {
-    color: var(--text-gray);
-    font-size: 0.95rem;
-    text-align: center;
-    line-height: 1.5;
-    margin-bottom: 40px;
-    max-width: 320px;
-}
-
-.plan-features {
-    width: 100%;
-    max-width: 320px;
-    margin-bottom: 40px;
-}
-
-.plan-features h2 {
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.plan-features ul {
-    list-style: none;
-}
-
-.plan-features li {
-    font-size: 0.95rem;
-    margin-bottom: 12px;
-    position: relative;
-    padding-left: 30px;
-    line-height: 1.4;
-    text-align: left;
-}
-
-.plan-features li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    top: -2px;
-    color: var(--accent-green);
-    font-weight: 700;
-    font-size: 1.1rem;
-}
-
-.plan-price {
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
-    gap: 8px;
-    margin-bottom: 40px;
-}
-
-.plan-price .currency {
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-
-.plan-price .price-value {
-    font-size: 3.5rem;
-    font-weight: 700;
-}
-
-.plan-price .period {
-    color: var(--text-gray);
-    font-size: 1rem;
-}
-
-.btn-subscribe {
-    display: inline-block;
-    text-decoration: none;
-    text-align: center;
-    background-color: var(--btn-white);
-    color: var(--card-bg);
-    border: none;
-    padding: 12px 0;
-    width: 100%;
-    max-width: 220px;
-    border-radius: 25px;
-    font-weight: 700;
-    font-size: 0.95rem;
-    cursor: pointer;
-    transition: opacity 0.2s;
-    letter-spacing: 1px;
-}
-
-.btn-subscribe:hover {
-    opacity: 0.9;
-}
-
-.btn-footer {
-    display: inline-block;
-    text-decoration: none;
-    text-align: center;
-    background-color: var(--btn-white);
-    color: #2c2463;
-    border: none;
-    padding: 12px 40px;
-    border-radius: 30px;
-    font-weight: 700;
-    font-size: 0.9rem;
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.btn-footer:hover {
-    background-color: #2c2463;
-    color: var(--btn-white);
-}
-
-.success-screen {
-    background-color: rgba(44, 36, 99, 0.4);
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.success-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-    max-width: 500px;
-    padding: 0 20px;
-}
-
-.success-message {
-    font-size: 1.8rem;
-    font-weight: 700;
-    text-align: center;
-    letter-spacing: 2px;
-    line-height: 1.4;
-    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-.profile-wrapper {
-    width: 100%;
-    max-width: 550px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-}
-
-.profile-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-}
-
-.avatar-container {
-    width: 110px;
-    height: 110px;
-    background-color: var(--text-gray);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--card-bg);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-.avatar-icon {
-    width: 70px;
-    height: 70px;
-}
-
-.profile-name {
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-}
-
-.profile-badge {
-    background: linear-gradient(90deg, #4ade80 0%, #22c55e 100%);
-    color: var(--card-bg);
-    padding: 4px 16px;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    box-shadow: 0 4px 10px rgba(74, 222, 128, 0.2);
-}
-
-.profile-form {
-    width: 100%;
-    background-color: var(--card-bg);
-    padding: 35px;
-    border-radius: 35px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.profile-form label {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--text-gray);
-    padding-left: 5px;
-    text-align: left;
-}
-
-.profile-form input {
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.07);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding: 14px 20px;
-    font-size: 0.95rem;
-    color: var(--text-white);
-    font-weight: 600;
-    outline: none;
-    transition: background-color 0.2s;
-}
-
-.profile-form input:focus {
-    background-color: rgba(255, 255, 255, 0.12);
-}
-
-.access-box {
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 35px;
-    padding: 30px;
-    text-align: center;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
-
-.access-box h2 {
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    letter-spacing: 0.5px;
-}
-
-.access-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
-
-.btn-access {
-    width: 100%;
-    max-width: 380px;
-    background-color: var(--btn-white);
-    color: var(--card-bg);
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding: 14px 20px;
-    border-radius: 20px;
-    font-weight: 700;
-    font-size: 0.82rem;
-    letter-spacing: 0.5px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-    transition: opacity 0.2s;
-}
-
-.btn-access:hover {
-    opacity: 0.9;
-}
-
-.btn-change {
-    width: 100%;
-    max-width: 220px;
-    background: none;
-    border: 2px solid var(--btn-white);
-    color: var(--btn-white);
-    text-decoration: none;
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-weight: 700;
-    font-size: 0.85rem;
-    letter-spacing: 0.5px;
-    margin-top: 10px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.btn-change:hover {
-    background-color: var(--btn-white);
-    color: var(--card-bg);
+    text-transform: uppercase;
 }
 
 .challenges-list {
@@ -511,14 +118,13 @@ body {
 }
 
 .challenge-card {
-    background-color: var(--card-bg);
-    border-radius: 30px;
+    background-color: #1E0A41;
+    border-radius: 25px;
     padding: 25px;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-    border: 1px solid rgba(255, 255, 255, 0.03);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .challenge-info {
@@ -533,7 +139,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--text-gray);
+    color: #bdafde;
     flex-shrink: 0;
 }
 
@@ -550,16 +156,15 @@ body {
 }
 
 .challenge-text h3 {
-    font-size: 1.1rem;
+    font-size: 18px;
     font-weight: 700;
     letter-spacing: 0.5px;
-    line-height: 1.3;
 }
 
 .challenge-meta {
-    color: var(--text-gray);
-    font-size: 0.85rem;
-    font-weight: 600;
+    color: #bdafde;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .challenge-progress-wrapper {
@@ -581,39 +186,39 @@ body {
     height: 100%;
     background: linear-gradient(90deg, #4ade80 0%, #22c55e 100%);
     border-radius: 4px;
-    transition: width 0.4s ease;
 }
 
 .progress-text {
-    font-size: 0.85rem;
+    font-size: 14px;
     font-weight: 700;
     min-width: 50px;
     text-align: right;
-    color: var(--text-white);
 }
 
 .btn-challenge-action {
     width: 100%;
-    background-color: var(--btn-white);
-    color: var(--card-bg);
-    border: none;
+    background-color: #FFFFFF;
+    color: #1E0A41;
     padding: 12px 0;
-    border-radius: 18px;
+    border-radius: 20px;
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 14px;
     font-weight: 700;
-    font-size: 0.85rem;
     letter-spacing: 1px;
     cursor: pointer;
-    transition: opacity 0.2s, background-color 0.2s, color 0.2s;
+    text-transform: uppercase;
+    transition: background-color 0.2s, opacity 0.2s;
 }
 
 .btn-challenge-action:hover:not(.completed) {
-    opacity: 0.9;
+    background-color: #2d105e;
+    color: #FFFFFF;
 }
 
 .btn-challenge-action.completed {
     background-color: rgba(74, 222, 128, 0.15);
-    border: 1px solid var(--accent-green);
-    color: var(--accent-green);
+    border: 1px solid #4ade80;
+    color: #4ade80;
     cursor: not-allowed;
 }
 
@@ -621,95 +226,63 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 10px;
 }
 
-@media (max-width: 968px) {
-    .plans-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-    .nav-menu {
-        gap: 15px;
+.btn-footer {
+    display: inline-block;
+    background-color: #FFFFFF;
+    color: #1E0A41;
+    padding: 12px 40px;
+    border-radius: 20px;
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-footer:hover {
+    background-color: #2d105e;
+    color: #FFFFFF;
+}
+
+@media (max-width: 1200px) {
+    .conteiner-app { 
+        max-width: 960px; 
     }
 }
 
 @media (max-width: 768px) {
-    .nav-menu {
-        display: none;
+    nav ul { 
+        gap: 15px; 
     }
-    .menu-toggle {
-        display: flex;
+    nav ul li a { 
+        font-size: 13px; 
+    }
+    .title {
+        font-size: 26px;
     }
 }
 
 @media (max-width: 600px) {
-    .navbar {
-        padding: 20px;
+    header { 
+        padding: 15px 20px; 
     }
-    .back-button-top {
-        display: block;
+    nav { 
+        display: none; 
     }
     .container {
         padding-top: 60px;
     }
     .title {
-        font-size: 1.5rem;
-        margin-top: 40px;
-        margin-bottom: 40px;
-    }
-    .plans-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-    .plan-card {
-        border-radius: 35px;
-        padding: 30px 20px;
-        min-height: auto;
-    }
-    .plan-card p {
-        font-size: 0.9rem;
-    }
-    .plan-detail-card {
-        padding: 40px 25px;
-        border-radius: 35px;
-    }
-    .plan-title {
-        font-size: 1.8rem;
-    }
-    .plan-price .price-value {
-        font-size: 3rem;
-    }
-    .success-message {
-        font-size: 1.4rem;
-    }
-    .profile-wrapper {
-        gap: 25px;
-    }
-    .profile-form {
-        padding: 25px 20px;
-        border-radius: 30px;
-    }
-    .form-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    .access-box {
-        padding: 25px 20px;
-        border-radius: 30px;
-    }
-    .btn-access {
-        font-size: 0.72rem;
-        padding: 12px 10px;
-    }
-    .btn-footer {
-        width: 100%;
-        max-width: 320px;
-        font-size: 0.8rem;
+        font-size: 22px;
+        margin-top: 20px;
+        margin-bottom: 30px;
     }
     .challenge-card {
         padding: 20px;
-        border-radius: 25px;
+        border-radius: 20px;
     }
     .challenge-info {
         gap: 15px;
@@ -719,14 +292,18 @@ body {
         height: 42px;
     }
     .challenge-text h3 {
-        font-size: 0.95rem;
+        font-size: 15px;
     }
-    .challenge-meta {
-        font-size: 0.8rem;
+    .challenge-meta, .progress-text {
+        font-size: 13px;
     }
     .btn-challenge-action {
         padding: 10px 0;
-        font-size: 0.8rem;
-        border-radius: 15px;
+        font-size: 13px;
+    }
+    .btn-footer {
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
     }
 }

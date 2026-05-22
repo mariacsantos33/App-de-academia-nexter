@@ -7,18 +7,20 @@
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="logo">
-            <img src="assets/img/alpha-club-logo.png" alt="ALPHA CLUB" class="logo-img">
+    <header class="header-treinos">
+        <div class="logo"> 
+            <img src="assets/img/logo_app.png" alt="Logo AlphaClub">
         </div>
-        <nav class="nav-menu">
-            <a href="#">HOME</a>
-            <a href="#">TREINOS</a>
-            <a href="#" class="active">AULAS</a>
-            <a href="#">PLANOS</a>
-            <a href="#">PERFIL</a>
-            <a href="#">DESAFIOS</a>
-            <a href="#">CHAT EM GRUPO</a>
+        <nav class="menu-navegacao">
+            <ul>
+                <li><a href="inicioelogin.html" class="item-ativo">HOME</a></li>
+                <li><a href="treinos.html">TREINOS</a></li>
+                <li><a href="aulas-disponiveis.html">AULAS</a></li>
+                <li><a href="planos.html">PLANOS</a></li>
+                <li><a href="perfil.html">PERFIL</a></li>
+                <li><a href="desafios.html">DESAFIOS</a></li>
+                <li><a href="chat.html">CHAT EM GRUPO</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -55,6 +57,7 @@
             </div>
 
             <div class="schedule-grid">
+                <div class="grid-header"></div>
                 <div class="grid-header">Seg</div>
                 <div class="grid-header">Ter</div>
                 <div class="grid-header">Qua</div>
@@ -74,7 +77,8 @@
 
                 <div class="time-slot">08:00</div>
                 <button class="status-btn reservado">Reservar</button>
-                <button class="status-btn selecionado">Reservar</button> <button class="status-btn reservado">Reservar</button>
+                <button class="status-btn selecionado">Reservar</button>
+                <button class="status-btn reservado">Reservar</button>
                 <button class="status-btn reservado">Reservar</button>
                 <button class="status-btn reservado">Reservar</button>
                 <button class="status-btn reservado">Reservar</button>
@@ -97,7 +101,6 @@
                 <button class="status-btn reservado">Reservar</button>
                 <button class="status-btn lotado" disabled>Lotado</button>
                 <button class="status-btn lotado" disabled>Lotado</button>
-
             </div>
 
             <div class="legend">

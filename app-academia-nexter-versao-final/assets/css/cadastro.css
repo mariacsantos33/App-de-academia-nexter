@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,11 +9,11 @@
 }
 
 body {
-    font-family: 'Inria Sans', sans-serif; 
+    font-family: 'Inria Sans', sans-serif;
     background-color: #49438D;
     color: #FFFFFF;
     height: 100vh;
-    overflow: hidden; 
+    overflow: hidden;
     display: flex;
     flex-direction: column;
 }
@@ -34,7 +34,6 @@ header {
     z-index: 10;
 }
 
-
 .conteudo-principal {
     flex: 1;
     display: flex;
@@ -51,18 +50,18 @@ header {
     padding: 40px 30px;
     border-radius: 35px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .card-cadastro h1 {
     font-size: 42px;
-    font-weight: 700; 
+    font-weight: 700;
     margin-bottom: 15px;
 }
 
 .instrucao {
     font-size: 14px;
-    font-weight: 300; 
+    font-weight: 300;
     margin-bottom: 25px;
     line-height: 1.5;
     opacity: 0.9;
@@ -80,13 +79,12 @@ header {
     border: none;
     border-radius: 25px;
     padding: 12px 20px;
-    font-family: 'Inria Sans', sans-serif; 
+    font-family: 'Inria Sans', sans-serif;
     font-size: 14px;
-    font-weight: 400; 
+    font-weight: 400;
     color: #1E0A41;
     outline: none;
 }
-
 
 .indicador-pagina {
     margin-top: 25px;
@@ -95,11 +93,10 @@ header {
     display: inline-block;
     padding: 8px 24px;
     border-radius: 25px;
-    font-weight: 700; 
+    font-weight: 700;
     font-size: 14px;
     align-self: center;
 }
-
 
 .botoes-rodape {
     position: absolute;
@@ -113,211 +110,62 @@ header {
     transform: translateX(-50%);
 }
 
-.botao-branco {
-    background-color: #FFFFFF;
-    color: #1E0A41;
-    border: none;
-    border-radius: 25px;
-    padding: 14px;
-    font-family: 'Inria Sans', sans-serif; /* Força o botão a usar a fonte */
-    font-weight: 700; /* Texto marcante */
+.botao-branco, .botao-transparente {
+    font-family: 'Inria Sans', sans-serif;
+    font-weight: 700;
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     text-align: center;
+    border-radius: 25px;
+    padding: 14px;
+}
+
+.botao-branco {
+    background-color: #FFFFFF;
+    color: #1E0A41;
 }
 
 .botao-transparente {
     background-color: transparent;
     color: #FFFFFF;
     border: 2px solid #FFFFFF;
-    border-radius: 25px;
     padding: 12px;
-    font-family: 'Inria Sans', sans-serif; /* Força o botão a usar a fonte */
-    font-weight: 700;
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    text-align: center;
 }
 
-@media (max-height: 680px) {
-    header { 
-    padding: 10px 40px; 
-}
-    .card-cadastro { 
-    padding: 20px 25px; 
-}
-    .card-cadastro h1 { 
-    font-size: 32px; margin-bottom: 5px; 
-}
-    .instrucao { 
-    font-size: 12px; margin-bottom: 12px; 
-}
-    .formulario-cadastro { 
-    gap: 8px; 
-}
-    .grupo-campo input { 
-    padding: 9px 20px; font-size: 13px;
-}
-    .indicador-pagina { 
-    margin-top: 12px; padding: 4px 18px; 
-}
-    .botoes-rodape { 
-    gap: 8px; margin-top: 10px; 
-}
-    .botao-branco, .botao-transparente { 
-    padding: 10px; font-size: 13px; 
-}
+/* --- RESPONSIVIDADE --- */
+
+@media (max-height: 740px) {
+    .card-cadastro { padding: 20px 25px; border-radius: 25px; }
+    .card-cadastro h1 { font-size: 30px; margin-bottom: 8px; }
+    .instrucao { font-size: 12px; margin-bottom: 12px; }
+    .grupo-campo input { padding: 9px 20px; font-size: 13px; }
+    .indicador-pagina { margin-top: 12px; padding: 4px 18px; }
+    .botoes-rodape { bottom: 20px; gap: 8px; }
 }
 
 @media (max-width: 769px) {
     body {
-        background-image: linear-gradient(rgba(73, 67, 141, 0.85), rgba(30, 10, 65, 0.95)),url(../img/img_fundo.avif);
+        background-image: linear-gradient(rgba(73, 67, 141, 0.85), rgba(30, 10, 65, 0.95)), url(../img/img_fundo.avif);
         background-size: cover;
         background-position: center;
     }
 }
 
 @media (max-width: 373px) {
-    .card-cadastro { 
-    padding: 20px 15px; border-radius: 25px; 
-}
-    .card-cadastro h1 { 
-    font-size: 30px; 
-}
-    .instrucao { 
-    font-size: 11px; 
-}
-    .grupo-campo input { 
-    padding: 9px 15px; font-size: 12px; 
-}
-    .botoes-rodape { 
-    max-width: 240px; 
-}
-}
-
-
-@media (min-width: 2561px) {
-    .conteiner-app { 
-    max-width: 100%; padding: 0 120px; 
-}
-    .card-cadastro { 
-    max-width: 650px; padding: 60px; border-radius: 50px; 
-}
-    .card-cadastro h1 {
-    font-size: 60px; 
-}
-    .instrucao { 
-    font-size: 22px; margin-bottom: 35px; 
-}
-    .formulario-cadastro { 
-    gap: 18px; 
-    }
-    .grupo-campo input { 
-    font-size: 20px; padding: 18px 25px; border-radius: 35px; 
-}
-    .indicador-pagina { 
-    font-size: 18px; padding: 10px 30px; margin-top: 35px; 
-}
-    .botoes-rodape { 
-    max-width: 450px; gap: 15px; 
-}
-    .botao-branco, .botao-transparente { 
-    font-size: 20px; padding: 20px; border-radius: 35px; 
-}
-}
-
-@media (max-width: 1440px) {
-    /* Alinha o contêiner principal para distribuir o espaço melhor */
-    .conteudo-principal {
-        padding: 20px 20px 120px 20px; /* Reduz o padding da base para descer o card */
-        justify-content: center;
-    }
-
-    /* Nova classe específica para manter a Página 2 centralizada e bem distribuída */
-    .formulario-cadastro-p2 {
-        gap: 12px; /* Espaçamento ideal para os 4 campos */
-        margin-top: 5px;
-    }
-
-    /* Se a tela for compacta na altura (ajuste para celulares antigos ou telas pequenas) */
-    @media (max-height: 740px) {
-        .card-cadastro {
-            padding: 25px 25px;
-            border-radius: 25px;
-        }
-        .card-cadastro h1 {
-            font-size: 34px;
-            margin-bottom: 8px;
-        }
-        .instrucao {
-            font-size: 12px;
-            margin-bottom: 15px;
-        }
-        .formulario-cadastro-p2 {
-            gap: 8px;
-        }
-        .grupo-campo input {
-            padding: 10px 18px;
-            font-size: 13px;
-        }
-        .indicador-pagina {
-            margin-top: 15px;
-            padding: 6px 20px;
-        }
-        .botoes-rodape {
-            bottom: 25px;
-        }
-    }
-
-    @media (max-width: 769px) {
-        body {
-            background-image: linear-gradient(rgba(73, 67, 141, 0.85), rgba(30, 10, 65, 0.95)), url(../img/img_fundo.avif);
-            background-size: cover;
-            background-position: center;
-        }
-    }
-
-    @media (max-width: 373px) {
-        .card-cadastro {
-            padding: 20px 15px;
-        }
-        .card-cadastro h1 {
-            font-size: 28px;
-        }
-        .botoes-rodape {
-            max-width: 240px;
-        }
-    }
+    .card-cadastro { padding: 20px 15px; }
+    .card-cadastro h1 { font-size: 28px; }
+    .botoes-rodape { max-width: 240px; }
 }
 
 @media (min-width: 2561px) {
-    .conteiner-app { 
-    max-width: 100%; padding: 0 120px; 
-}
-    .card-cadastro { 
-    max-width: 650px; padding: 60px; border-radius: 50px; 
-}
-    .card-cadastro h1 { 
-    font-size: 60px; 
-}
-    .instrucao { 
-    font-size: 22px; margin-bottom: 35px; 
-}
-    .formulario-cadastro { 
-    gap: 18px; 
-}
-    .grupo-campo input { 
-    font-size: 20px; padding: 18px 25px; border-radius: 35px; 
-}
-    .indicador-pagina { 
-    font-size: 18px; padding: 10px 30px; margin-top: 35px; 
-}
-    .botoes-rodape { 
-    max-width: 450px; gap: 15px; 
-}
-    .botao-branco, .botao-transparente { 
-    font-size: 20px; padding: 20px; border-radius: 35px; 
-}
+    .conteiner-app { max-width: 100%; padding: 0 120px; }
+    .card-cadastro { max-width: 650px; padding: 60px; border-radius: 50px; }
+    .card-cadastro h1 { font-size: 60px; }
+    .instrucao { font-size: 22px; margin-bottom: 35px; }
+    .formulario-cadastro { gap: 18px; }
+    .grupo-campo input { font-size: 20px; padding: 18px 25px; border-radius: 35px; }
+    .indicador-pagina { font-size: 18px; padding: 10px 30px; margin-top: 35px; }
+    .botoes-rodape { max-width: 450px; gap: 15px; }
+    .botao-branco, .botao-transparente { font-size: 20px; padding: 20px; border-radius: 35px; }
 }

@@ -1,0 +1,513 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+:root{
+    --cor-fundo: #060512;
+    --cor-botao: #51E5FF;
+}
+
+
+body{
+    background-color: var(--cor-fundo)
+
+}
+
+.logo{
+    width: 180px;
+    height: 150px;
+    margin-left: 26px;
+}
+
+.button{
+    display: flex;
+    justify-content: right;
+    margin-top: -100px;
+    margin-right: 140px;
+    gap: 30px;
+    border-radius: 15px;
+}
+
+.botao{
+     border-radius: 15px;
+     height: 50px;
+     width: 220px;
+     background-color: var(--cor-botao);
+}
+
+.botao:hover{
+    background-color: transparent;
+    color: #51E5FF;
+}
+
+.texto1{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Archivo Black";
+    margin-top: 190px;
+    font-size: 35px;
+}
+
+.texto2{
+    margin-top: -10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "DM Sans";
+    font-size: 20px;
+    text-align: center;
+}
+
+.span{
+    margin: 10px;
+}
+
+.botao3{
+    background-color: var(--cor-botao);
+    border-radius: 15px;
+    height: 50px;
+    width: 220px;
+    margin-top: 40px;
+    margin-left: 40%;
+}
+
+.botao3:hover{
+    background-color: transparent;
+    color: #51E5FF;
+}
+
+.beneficios{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+}
+
+.treinadores img{
+    width: 140px;
+    height: 140px;
+}
+
+.treinadores p{
+    font-size: small;
+}
+
+.treinadores{
+    background-color: #514C4C;
+    color: white;
+    width: 300px;
+    height: 200px;
+    border-radius: 21px;
+    margin-left: 20px;
+    margin-top: 190px;
+    text-align: center;
+    font-family: "Archivo Black";
+}
+
+
+.crescimento img{
+    width: 140px;
+    height: 140px;
+}
+
+.crescimento p{
+    font-size: small;
+}
+
+.crescimento{ 
+    background-color: #514C4C;
+    color: white;
+    width: 300px;
+    height: 200px;
+    border-radius: 21px;
+    margin-left: 20px;
+    margin-top: 190px;
+    text-align: center;
+    font-family: "Archivo Black";
+}
+
+
+.resultados img{
+    width: 140px;
+    height: 140px;
+}
+
+.resultados p{
+    font-size: small;
+}
+
+.resultados{
+    background-color: #514C4C;
+    color: white;
+    width: 300px;
+    height: 200px;
+    border-radius: 21px;
+    margin-left: 20px;
+    margin-top: 190px;
+    text-align: center;
+    font-family: "Archivo Black";
+}
+
+.titulo-planos{
+    color: white;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    font-family: "Archivo Black";
+    margin-top: 200px;
+}
+
+.planos{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+    margin-top: 70px;
+}
+
+
+.plano-start{
+    background-color: #514C4C;
+    color: white;
+    width: 330px;
+    height: 500px;
+    border-radius: 21px;
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.plano-start img{
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plano-start h4{
+    font-family: "Archivo Black";
+    font-size: xx-large;
+}
+
+.preco-start{
+    font-family: "Archivo Black";
+    font-size: 25px;
+    padding-top: 10px;
+}
+
+.plano-start p{
+    font-family: "DM Sans";
+    width: 200px;
+    align-items: left;
+}
+
+.botao-start{
+    background-color: var(--cor-botao);
+    border-radius: 15px;
+    height: 40px;
+    width: 220px;
+    margin-top: 30px;
+}
+
+.botao-start:hover{
+    background-color: transparent;
+    color: #51E5FF;
+}
+
+.descricao1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.descricao2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.descricao3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.descricao4{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.plano-premium{
+    background-color: #514C4C;
+    color: white;
+    width: 340px;
+    height: 535px;
+    border-radius: 21px;
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.plano-premium img{
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plano-premium h4{
+    font-family: "Archivo Black";
+    font-size: xx-large;
+}
+
+.preco-premium{
+    font-family: "Archivo Black";
+    font-size: 25px;
+    padding-top: 10px;
+}
+
+.plano-premium p{
+    font-family: "DM Sans";
+    width: 200px;
+    align-items: left;
+}
+
+.botao-premium{
+    background-color: var(--cor-botao);
+    border-radius: 15px;
+    height: 40px;
+    width: 220px;
+    margin-top: 30px;
+}
+
+.botao-premium:hover{
+    background-color: transparent;
+    color: #51E5FF;
+}
+
+.descricao5{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.descricao6{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.descricao7{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.descricao8{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.descricao9{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.plano-alpha{
+    background-color: #514C4C;
+    color: white;
+    width: 340px;
+    height: 500px;
+    border-radius: 21px;
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.plano-alpha img{
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plano-alpha h4{
+    font-family: "Archivo Black";
+    font-size: xx-large;
+}
+
+.preco-alpha{
+    font-family: "Archivo Black";
+    font-size: 25px;
+    padding-top: 10px;
+}
+
+.plano-alpha p{
+    font-family: "DM Sans";
+    width: 200px;
+    align-items: left;
+}
+
+.botao-alpha{
+    background-color: var(--cor-botao);
+    border-radius: 15px;
+    height: 40px;
+    width: 220px;
+    margin-top: 30px;
+}
+
+.botao-alpha:hover{
+    background-color: transparent;
+    color: #51E5FF;
+}
+
+.descricao10{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.descricao11{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.descricao12{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.descricao13{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.rodape{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: DM Sans;
+    margin-top: 120px;
+    height: 100px;
+}
+
+
+@media (max-width: 769px) {
+
+    .textos{
+        margin-left: 40px;
+    }
+
+    .botao3{
+        margin-left:280px;
+    }
+
+    .button {
+        margin-right: 60px;
+
+    }
+
+    .treinadores {
+        height:260px;
+        width: 1100px;
+    }
+
+    .crescimento{
+        height: 260px;
+        width: 1100px;
+    }
+
+    .resultados{
+        height: 260px;
+        width: 1100px;
+    }
+
+    .resultados img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+    }
+
+    .beneficios{
+        margin-right: 20px;
+        
+    }
+
+    .planos{
+        display: block;
+        flex-direction: column;       
+        margin-left: 10%;
+        margin-top: 80px;
+        margin-bottom: 20px;
+    }
+    .plano-start {
+        margin-bottom: 20px;
+    }
+
+    .plano-premium{
+        margin-bottom: 20px ;
+    }
+
+    .rodape{
+        margin-left: 15%;
+    }
+
+}
+
+
+@media (max-width: 990px) {
+
+    .planos{
+        display: block;
+        margin-left: 34%;
+        margin-top: 80px;
+        margin-bottom: 20px;
+    }
+    
+    .plano-start{
+        margin-bottom: 20px;
+    }
+
+    .plano-premium{
+        margin-bottom: 20px;
+    }    
+}

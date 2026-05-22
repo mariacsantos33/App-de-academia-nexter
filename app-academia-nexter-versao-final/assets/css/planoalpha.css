@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+}
+
+body {
+    font-family: 'Inria Sans', sans-serif;
+    background-color: #49438D;
+    color: #FFFFFF;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.conteiner-app {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+header {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(30, 10, 65, 0.5) 0%, rgba(0,0,0,0) 100%);
+    z-index: 10;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.logo span {
+    color: #4a90e2;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+nav ul li a:hover {
+    opacity: 1;
+    border-bottom: 2px solid #FFFFFF;
+    padding-bottom: 4px;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.plan-detail-card {
+    background-color: #1E0A41;
+    border-radius: 40px;
+    padding: 50px 40px;
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    margin-top: 30px;
+}
+
+.plan-title {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.plan-description {
+    color: #bdafde;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    max-width: 320px;
+    font-weight: 300;
+}
+
+.plan-features {
+    width: 100%;
+    max-width: 360px;
+    margin-bottom: 40px;
+}
+
+.plan-features h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.plan-features ul {
+    list-style: none;
+}
+
+.plan-features li {
+    font-size: 15px;
+    margin-bottom: 14px;
+    position: relative;
+    padding-left: 25px;
+    line-height: 1.4;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.plan-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #4ade80;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.plan-price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 40px;
+}
+
+.plan-price .currency {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.plan-price .price-value {
+    font-size: 56px;
+    font-weight: 700;
+}
+
+.plan-price .period {
+    color: #bdafde;
+    font-size: 16px;
+}
+
+.btn-subscribe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    color: #1E0A41;
+    width: 100%;
+    max-width: 240px;
+    height: 50px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.btn-subscribe:hover {
+    background-color: #4ade80;
+    color: #1E0A41;
+}
+
+.rodape-plano {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.btn-footer {
+    display: inline-block;
+    background-color: transparent;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    padding: 12px 40px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.btn-footer:hover {
+    background-color: #FFFFFF;
+    color: #1E0A41;
+}
+
+@media (max-width: 768px) {
+    nav { display: none; }
+}
+
+@media (max-width: 600px) {
+    header { padding: 15px 20px; }
+    .plan-detail-card { padding: 40px 25px; border-radius: 35px; }
+    .plan-title { font-size: 26px; }
+    .btn-footer { width: 100%; max-width: 320px; text-align: center; font-size: 13px; }
+}
